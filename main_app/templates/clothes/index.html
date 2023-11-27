@@ -5,12 +5,14 @@
 
 {% for c in clothes %}
   <div class="card">
-    <div class="card-content">
-      <span class="card-title">{{ c.type }}</span>
-      <p>Material: {{ c.material }}</p>
-      <p>Description: {{ c.description }}</p>
-      <p>Size: {{ c.size }}</p>
-    </div>
+    <a href="{% url 'detail' c.id %}">
+        <div class="card-content">
+            <span class="card-title">{{ c.type }}</span>
+            <p>Material: {{ c.material }}</p>
+            <p>Description: {{ c.description }}</p>
+            <p>Size: {{ c.size }}</p>
+        </div>
+    </a>
   </div>
 {% endfor %}
 
